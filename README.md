@@ -48,12 +48,12 @@ Docker Deployment Instruction. (Prerequiste you need to have docker installed in
 5. Table Creation
 
 	CREATE TABLE Person (  
-           <\t> PersonID varchar(255),    
-           <\t> FirstName varchar(255) NOT NULL,
-           <\t> MiddleName varchar(255),  
-           <\t> LastName varchar(255) NOT NULL,  
-           <\t> Age int NOT NULL,    
-           <\t> Gender varchar(255) NOT NULL,    
+            PersonID varchar(255),    
+            FirstName varchar(255) NOT NULL,
+            MiddleName varchar(255),  
+            LastName varchar(255) NOT NULL,  
+            Age int NOT NULL,    
+            Gender varchar(255) NOT NULL,    
             PRIMARY KEY (PersonID),  
 	);
 

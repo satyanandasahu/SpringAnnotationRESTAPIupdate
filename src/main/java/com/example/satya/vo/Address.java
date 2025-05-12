@@ -6,6 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name="Address")
@@ -45,6 +46,7 @@ public class Address //implements Serializable
 	@JoinColumn(name = "PersonId")
 	private Person Person;
 	
+	@Transient
 	private String personId;
 
 	public String getAddressId() {
@@ -134,7 +136,7 @@ public class Address //implements Serializable
 	public void setPersonId(String personId) {
 		this.personId = personId;
 	}
-
+/*
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -163,5 +165,5 @@ public class Address //implements Serializable
 		builder.append("]");
 		return builder.toString();
 	}
-
+*/
 }

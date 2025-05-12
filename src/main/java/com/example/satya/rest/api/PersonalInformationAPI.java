@@ -23,7 +23,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @RestController
 public class PersonalInformationAPI {
 
-//	private ApplicationContext applicationContext = null;
 	private static final Logger logger = LogManager.getLogger();
 
 	public PersonalInformationAPI() {
@@ -32,15 +31,13 @@ public class PersonalInformationAPI {
 
 	@Autowired
 	private IPersonService personService;
-	
-	
 
 	@GetMapping(value = "/user/api", produces = { MediaType.APPLICATION_JSON_VALUE })
 	public String getPersonBiography(@RequestParam(name = "id") String id) {
 		logger.info("Entered getPersonBiography id = " + id);
 		String jsonString = "";
+		Person person = null;
 		try {
-			Person person = null;
 
 			if (id != null && !id.isBlank() && !id.isEmpty()) {
 				Person personObject = new Person();
@@ -69,20 +66,20 @@ public class PersonalInformationAPI {
 		logger.info("Exited getPersonBiography person = " + jsonString);
 		return jsonString;
 	}
-	
-	
-	
-	
 
 	@PostMapping(value = "/user/api/create")
 	public String createPerson(@RequestBody Person person) {
 		logger.info("Entered createPerson id = " + person);
-
-		if (person != null) {
-			// personService = (IPersonService)applicationContext.getBean("personService");
-			personService.createPerson(person);
-		} else
-			throw new InvalidDataException("Person data is missing");
+		try {
+			if (person != null) {
+				personService.createPerson(person);
+			} else
+				throw new InvalidDataException("Person data is missing");
+		} catch (Exception e) {
+			e.printStackTrace();
+			logger.debug("Normal Exception: ", e);
+			throw new ResourceNotFoundException("Server is busy");
+		}
 
 		logger.info("Exited createPerson person = " + person);
 		return person.getPersonId() + " is created";

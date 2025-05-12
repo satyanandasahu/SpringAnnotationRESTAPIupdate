@@ -47,6 +47,8 @@ public class PersonDAO implements IPersonDAO {
 
 	public void save(Person person) {
 		logger.info("Entered save");
+
+		person.getAddress().forEach(address -> address.setPerson(person));
 		Session session = getSession();
 		session.beginTransaction();
 		session.persist(person);

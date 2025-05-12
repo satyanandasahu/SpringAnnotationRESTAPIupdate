@@ -136,7 +136,7 @@ public class Person {
 	public void setAddress(Set<Address> address) {
 		this.address = address;
 	}
-
+/*
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -157,7 +157,7 @@ public class Person {
 		builder.append("]");
 		return builder.toString();
 	}
-
+*/
 	
 
 }

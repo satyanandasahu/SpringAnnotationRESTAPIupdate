@@ -47,14 +47,14 @@ Docker Deployment Instruction. (Prerequiste you need to have docker installed in
 
 5. Table Creation
 
-	CREATE TABLE Person (
-		PersonID varchar(255),
-		FirstName varchar(255),
-		MiddleName varchar(255),
-		LastName varchar(255),
-		Age int,
-		Gender varchar(255),
-		PRIMARY KEY (PersonID),
+	CREATE TABLE Person (  
+		PersonID varchar(255),  
+		FirstName varchar(255),  
+		MiddleName varchar(255),  
+		LastName varchar(255),  
+		Age int,  
+		Gender varchar(255),  
+		PRIMARY KEY (PersonID),  
 	);
 
 	ALTER TABLE Person ADD PRIMARY KEY (PersonID);   
@@ -65,17 +65,17 @@ Docker Deployment Instruction. (Prerequiste you need to have docker installed in
 	ALTER TABLE Person MODIFY Age int NOT NULL;  
 
 
-	CREATE TABLE Address (
-		AddressId varchar(255),
-		PersonId Varchar(255) NOT NULL,
-		AddressLine1 varchar(255) NOT NULL,
-		AddressLine2 varchar(255),
-		PinZipcode varchar(255) NOT NULL,
-		Country varchar(255) NOT NULL,
-		City varchar(255) NOT NULL, 
-		DistrictCounty varchar(255) NOT NULL,
-		AddressType varchar(255) NOT NULL,
-		PRIMARY KEY (AddressId),
-		CONSTRAINT FK_PersonTab FOREIGN KEY (PersonId)
-		REFERENCES Person(PersonId)
+	CREATE TABLE Address (  
+		AddressId varchar(255),  
+		PersonId Varchar(255) NOT NULL,  
+		AddressLine1 varchar(255) NOT NULL,  
+		AddressLine2 varchar(255),  
+		PinZipcode varchar(255) NOT NULL,  
+		Country varchar(255) NOT NULL,  
+		City varchar(255) NOT NULL,   
+		DistrictCounty varchar(255) NOT NULL,  
+		AddressType varchar(255) NOT NULL,  
+		PRIMARY KEY (AddressId),  
+		CONSTRAINT FK_PersonTab FOREIGN KEY (PersonId)   
+		REFERENCES Person(PersonId)   
 	);

@@ -1,0 +1,6 @@
+FROM eclipse-temurin:21
+ WORKDIR /app
+    COPY target/PersonalInformationRestAPI-0.0.1-SNAPSHOT.jar /app/PersonalInformationRestAPI-0.0.1-SNAPSHOT.jar
+	COPY target/lib/ /app/lib/
+    EXPOSE 8080
+   	CMD ["java", "-jar", "PersonalInformationRestAPI-0.0.1-SNAPSHOT.jar"]

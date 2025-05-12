@@ -57,12 +57,6 @@ Docker Deployment Instruction. (Prerequiste you need to have docker installed in
 		PRIMARY KEY (PersonID),  
 	);
 
-	ALTER TABLE Person MODIFY FirstName varchar(255) NOT NULL;  
-	ALTER TABLE Person MODIFY LastName varchar(255) NOT NULL;  
-	ALTER TABLE Person MODIFY Gender varchar(255) NOT NULL;  
-	ALTER TABLE Person MODIFY Age int NOT NULL;  
-
-
 	CREATE TABLE Address (  
 		AddressId varchar(255),  
 		PersonId Varchar(255) NOT NULL,  

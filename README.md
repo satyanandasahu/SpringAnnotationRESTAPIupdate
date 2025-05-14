@@ -71,3 +71,5 @@ Docker Deployment Instruction. (Prerequiste you need to have docker installed in
 		CONSTRAINT FK_PersonTab FOREIGN KEY (PersonId)   
 		REFERENCES Person(PersonId)   
 	);
+
+Note: To better understand the project watch this video on youtube link: https://youtu.be/9bYbFjbLUac

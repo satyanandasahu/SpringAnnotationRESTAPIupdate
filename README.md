@@ -11,10 +11,10 @@ Run this maven command to create a jar artifact <b> mvn clean package -Pjar </b>
 Run this maven command to create a war artifact <b> mvn clean package -Pwar </b>
 
 To run the jar file navigate to the targat folder in command prompt then run this command <b> java - jar PersonalInformationRestAPI-0.0.1-SNAPSHOT.jar </b>
-Hit this URL <b> http://localhost:8080/welcomemessage </b>after the successful start of embbeded tomcat. You everything goes well you will get this message <b> Welcome to Personal Information Portal </b>
+Hit this URL <b> http://localhost:8080/welcomemessage </b>after the successful start of embbeded tomcat. If everything goes well you will get this message <b> Welcome to Personal Information Portal </b>
 
 To run the war file, deploye it on the external tomcat.
-Hit this URL <b> http://localhost:8080/<applicationcontext>/welcomemessage </b>after the successful start of embbeded tomcat. You everything goes well you will get this message <b> Welcome to Personal Information Portal </b>
+Hit this URL <b> http://localhost:8080/<applicationcontext>/welcomemessage </b>after the successful start of embbeded tomcat. If everything goes well you will get this message <b> Welcome to Personal Information Portal </b>
 Here applicationcontext is PersonalInformationRestAPI-0.0.1-SNAPSHOT
 
 war: Web Application Archive     

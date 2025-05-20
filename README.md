@@ -2,10 +2,7 @@ PersonalRestAPI is a Spring Boot REST API for learning purpose. Have the capabil
 
 Dependencies: Maven will takecare of all the JAR/Library dependecies but you need to install MySQL DB for database. You can also change the configuration DB for other external or in memeory DB.
 
-After installation of MySQL DB you need to have Person table on your DB.
-
-Here is the create query: 
-CREATE TABLE Person (PersonId varchar(255), FirstName varchar(255), MiddleName varchar(255), LastName varchar(255), Age int, Gender varchar(255));
+After installation of MySQL DB you need to have Person & Address table on your DB Schema. Query is given below 
 
 Run this maven command to create a jar artifact <b> mvn clean package -Pjar </b>
 Run this maven command to create a war artifact <b> mvn clean package -Pwar </b>
